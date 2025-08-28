@@ -6,15 +6,15 @@ class Event(models.Model):
         OPEN = "open", "Open"
         CLOSED = "closed", "Closed"
 
-    name = models.CharField(max_length=100)
-    date = models.DateField()
+    name = models.CharField(max_length=100, verbose_name="Название")
+    date = models.DateField(verbose_name="Дата")
     status = models.CharField(
         choices=StatusEvent.choices,
         default=StatusEvent.OPEN,
+        verbose_name="Статус мероприятия",
     )
     place = models.ForeignKey(
-        "Place",
-        on_delete=models.PROTECT,
+        "Place", on_delete=models.PROTECT, verbose_name="Место проведения"
     )
 
 

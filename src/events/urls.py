@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
-from .views import EventListView
+from events.views import EventListView
 
 urlpatterns = [
     path("", EventListView.as_view(), name="event-list"),
