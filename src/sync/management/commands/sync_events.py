@@ -23,7 +23,7 @@ def parse_event(event_data):
 
 
 class Command(BaseCommand):
-    help = "Синхронизация ивентов с внешнего провайдера"
+    help = "Синхронизация ивентов с API"
 
     def add_arguments(self, parser):
         parser.add_argument(
